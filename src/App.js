@@ -6,6 +6,8 @@ import Gif from './components/gif';
 import GifList from './components/gif_list';
 
 function App() {
+  const [ gifList, setGifList ] = useState(["3LdNdcLDaPL8bK0ObS"])
+
   return (
     <div>
       <div className="left-scene">
@@ -15,7 +17,7 @@ function App() {
         </div>
       </div>
       <div className="right-scene">
-        <GifList />
+        <GifList gifList={gifList} />
       </div>
     </div>
   );
