@@ -4,10 +4,14 @@ import Gif from './gif';
 
 const GifList = ({gifList}) => {
 
-  return (
-    gifList.map(gifId => {
-      <Gif id={gifId} />
+  const renderList = gifList.map(gifId => {
+      return <Gif id={gifId} key={gifId} />
     })
+
+  return (
+    <div className="gif-list">
+      {renderList}
+    </div>
   );
 }
 

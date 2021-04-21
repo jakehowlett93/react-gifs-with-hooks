@@ -13,7 +13,7 @@ function App() {
       <div className="left-scene">
         <Search />
         <div className="selected-gif">
-          <Gif />
+          <Gif id="3LdNdcLDaPL8bK0ObS" />
         </div>
       </div>
       <div className="right-scene">

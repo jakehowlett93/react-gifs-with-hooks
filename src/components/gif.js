@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Gif = () => {
+const Gif = ({id}) => {
 
-  const source = `https://media0.giphy.com/media/3LdNdcLDaPL8bK0ObS/giphy.gif`;
+  const source = `https://media0.giphy.com/media/${id}/giphy.gif`;
 
   return (
     <img src={source} className="gif" alt="A gif" />
