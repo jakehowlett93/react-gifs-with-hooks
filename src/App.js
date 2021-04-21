@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Search from './components/search';
 import Gif from './components/gif';
+import GifList from './components/gif_list';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
           <Gif />
         </div>
       </div>
-      <div className="right-scene"></div>
+      <div className="right-scene">
+        <GifList />
+      </div>
     </div>
   );
 }
