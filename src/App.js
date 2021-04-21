@@ -8,6 +8,7 @@ import GifList from './components/gif_list';
 
 function App() {
   const [ gifList, setGifList ] = useState(["3LdNdcLDaPL8bK0ObS"])
+  const [ selectedGif, setSelectedGif ] = useState(["3LdNdcLDaPL8bK0ObS"])
 
   const searchGifs = (value) => {
     const ids = [];
@@ -19,16 +20,20 @@ function App() {
     });
   }
 
+  const select = (id) => {
+    setSelectedGif(id)
+  }
+
   return (
     <div>
       <div className="left-scene">
         <Search search={searchGifs} />
         <div className="selected-gif">
-          <Gif id="3LdNdcLDaPL8bK0ObS" />
+          <Gif id={selectedGif} select={select} />
         </div>
       </div>
       <div className="right-scene">
-        <GifList gifList={gifList} />
+        <GifList gifList={gifList} select={select} />
       </div>
     </div>
   );
